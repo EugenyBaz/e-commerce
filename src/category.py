@@ -1,5 +1,3 @@
-
-
 class Category:
     name: str
     description: str
@@ -17,6 +15,3 @@ class Category:
 
     def __repr__(self):
         return f"Category(name='{self.name}', description='{self.description}')"
-
-
-

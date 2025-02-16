@@ -12,6 +12,3 @@ class Product:
 
     def __repr__(self):
         return f'name="{self.name}", description="{self.description}", price={self.price}, quantity={self.quantity})'
-
-
-
