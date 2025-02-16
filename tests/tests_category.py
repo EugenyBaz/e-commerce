@@ -7,3 +7,7 @@ def test_category_init(category_list):
     """Тестирование корректности подсчета категорий и продуктов"""
     assert category_list.category_count == 1
     assert category_list.product_count == 4
+
+def test_empty_product_list(category_empty_prod_list):
+    """Тестирование пустого списка продуктов"""
+    assert category_empty_prod_list.product_count == 0
