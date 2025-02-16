@@ -20,9 +20,4 @@ class Category:
         return f"Category(name='{self.name}', description='{self.description}')"
 
 
-if __name__ == "__main__":
-    product_list1 = Product("телефон", "черный, 100Гб", 100000.0, 1)
-    category1 = Category("Телевизоры", "SMART телевизоры", [product_list1])
-    print(category1.name)
-    print(category1.description)
-    print(category1.products)
+
