@@ -13,7 +13,8 @@ class Category:
         self.description = description
         self.products = product_list if product_list else []
         Category.category_count += 1
-        Category.product_count += len(product_list) if product_list else 0
+        if product_list:
+            Category.product_count += len(product_list)
 
     def __repr__(self):
         return f"Category(name='{self.name}', description='{self.description}')"
