@@ -14,3 +14,9 @@ def category_list():
     return Category(
         name="Смартфоны", description="Самые лучшие", product_list=["Samsung", "Улучшенная версия", 1000, 1]
     )
+
+@pytest.fixture
+def category_empty_prod_list():
+    return Category(
+        name="Смартфоны", description="Самые лучшие", product_list=[]
+    )
