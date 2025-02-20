@@ -1,7 +1,14 @@
-
-
 class Product:
     name: str
     description: str
     price: float
     quantity: int
+
+    def __init__(self, name, description, price, quantity):
+        self.name = name
+        self.description = description
+        self.price = price
+        self.quantity = quantity
+
+    def __repr__(self):
+        return f'name="{self.name}", description="{self.description}", price={self.price}, quantity={self.quantity})'
