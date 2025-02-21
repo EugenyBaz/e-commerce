@@ -22,7 +22,7 @@ def category_list():
 def category_empty_prod_list():
     return Category(name="Смартфоны", description="Самые лучшие", product_list=[])
 
+
 @pytest.fixture
 def new_price():
     return Product(name="Iphone 15", description="512GB, Gray space", price=-210000.0, quantity=8)
-
