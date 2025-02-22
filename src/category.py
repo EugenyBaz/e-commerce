@@ -1,3 +1,6 @@
+from src.product import Product
+
+
 class Category:
     name: str
     description: str
@@ -17,8 +20,11 @@ class Category:
         return f"Category(name='{self.name}', description='{self.description}')"
 
     def add_product(self, product):
-        self.__products.append(product)
-        Category.product_count += 1
+        if  isinstance(product, Product):
+            self.__products.append(product)
+            Category.product_count += 1
+        else:
+            print("Продукт не является экземпляром класса Product или любого его подкласса")
 
     @property
     def products(self):

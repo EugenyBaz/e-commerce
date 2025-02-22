@@ -21,13 +21,11 @@ def test_add_product(product_list):
     """Тестирование счетчика добавления товаров в категорию"""
     assert Category.product_count == 1
 
-    # def add_product(self, product):
-    #     self.__products.append(product)
-    #     Category.product_count +=1
-    #
-    # @property
-    # def products(self):
-    #     prod_list = []
-    #     for prod in self.__products:
-    #         prod_list.append(f'{prod.name}, {prod.price} руб. Остаток: {prod.quantity} шт.')
-    #     return prod_list
+def test_add_product_valid(capsys,category_list):
+    """Тестирование на валидность  добавления товаров в категорию"""
+    category = Category(name="Electronics", description="All kinds of electronics")
+    category.add_product(category_list)
+    message = capsys.readouterr()
+    assert message.out.strip() == "Продукт не является экземпляром класса Product или любого его подкласса"
+
+
