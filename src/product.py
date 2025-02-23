@@ -10,8 +10,8 @@ class Product:
         self.__price = price
         self.quantity = quantity
 
-    def __repr__(self):
-        return f'name="{self.name}", description="{self.description}", price={self.price}, quantity={self.quantity})'
+    def __str__(self):
+        return f"{self.name}, {self.price} руб. Остаток: {self.quantity} шт."
 
     @classmethod
     def new_product(cls, product):

@@ -2,7 +2,6 @@ from src.product import Product
 from src.category import Category
 from src.data_upload import read_data_json
 
-
 if __name__ == "__main__":
     product1 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
     product2 = Product("Iphone 15", "512GB, Gray space", 210000.0, 8)
@@ -53,6 +52,18 @@ if __name__ == "__main__":
 
     # Доп задание
     prod_list = read_data_json()
+
+    categories = []
+    for category_dict in prod_list:
+        products = [Product(product['name'], product['description'], product['price'], product['quantity']) for product
+                    in category_dict['products']]
+        category = Category(category_dict['name'], category_dict['description'], products)
+        categories.append(category)
+
+    print(categories)
+
+    total_cost = category1 + category2
+    print(total_cost)
 
     categories = []
     for category_dict in prod_list:
