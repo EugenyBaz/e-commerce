@@ -30,3 +30,8 @@ def test_new_price_invalid(capsys, new_price):
 def test_product_str(product_list):
     """Тест на строковое представление в Product"""
     assert str(product_list) == "Iphone 15, 210000.0 руб. Остаток: 8 шт."
+
+
+def test_product_str(product_list):
+    """Тест на строковое представление в Product"""
+    assert str(product_list) == "Iphone 15, 210000.0 руб. Остаток: 8 шт."
