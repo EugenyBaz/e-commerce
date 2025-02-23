@@ -24,20 +24,23 @@ if __name__ == "__main__":
     print(product3.quantity)
 
     category1 = Category("Смартфоны",
-                         "Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни",
+                         "Смартфоны, "
+                         "как средство не только коммуникации,"
+                         " но и получения дополнительных функций для удобства жизни",
                          [product1, product2, product3])
 
     print(category1.name == "Смартфоны")
     print(category1.description)
+    print(category1)
     print(len(category1.products))
     print(category1.category_count)
     print(category1.product_count)
-
-
+    print(category1.products)
 
     product4 = Product("55\" QLED 4K", "Фоновая подсветка", 123000.0, 7)
     category2 = Category("Телевизоры",
-                         "Современный телевизор, который позволяет наслаждаться просмотром, станет вашим другом и помощником",
+                         "Современный телевизор,"
+                         " который позволяет наслаждаться просмотром, станет вашим другом и помощником",
                          [product4])
 
     print(category2.name)
@@ -47,8 +50,6 @@ if __name__ == "__main__":
 
     print(Category.category_count)
     print(Category.product_count)
-
-
 
     # Доп задание
     prod_list = read_data_json()
@@ -62,5 +63,5 @@ if __name__ == "__main__":
 
     print(categories)
 
-
-
+    total_cost = category1 + category2
+    print(total_cost)
