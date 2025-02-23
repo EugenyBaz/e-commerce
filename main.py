@@ -30,9 +30,11 @@ if __name__ == "__main__":
 
     print(category1.name == "Смартфоны")
     print(category1.description)
+    print(category1)
     print(len(category1.products))
     print(category1.category_count)
     print(category1.product_count)
+    print(category1.products)
 
     product4 = Product("55\" QLED 4K", "Фоновая подсветка", 123000.0, 7)
     category2 = Category("Телевизоры",
@@ -59,3 +61,6 @@ if __name__ == "__main__":
         categories.append(category)
 
     print(categories)
+
+    total_cost = category1 + category2
+    print(total_cost)

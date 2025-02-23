@@ -25,3 +25,8 @@ def test_new_price_invalid(capsys, new_price):
     new_price.price = -200
     message = capsys.readouterr()
     assert message.out.strip() == "Цена не должна быть нулевая или отрицательная"
+
+
+def test_product_str(product_list):
+    """Тест на строковое представление в Product"""
+    assert str(product_list) == "Iphone 15, 210000.0 руб. Остаток: 8 шт."
