@@ -65,3 +65,4 @@ if __name__ == "__main__":
 
     total_cost = category1 + category2
     print(total_cost)
+
