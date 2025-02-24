@@ -36,3 +36,12 @@ class Product:
         other_total_cost_prod = other.price * other.quantity
 
         return this_total_cost_prod + other_total_cost_prod
+
+    def __add__(self, other):
+        if not isinstance(other, Product):
+            raise TypeError("Можно складывать только продукты!")
+
+        this_total_cost_prod = self.__price * self.quantity
+        other_total_cost_prod = other.price * other.quantity
+
+        return this_total_cost_prod + other_total_cost_prod
