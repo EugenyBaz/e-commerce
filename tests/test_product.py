@@ -31,6 +31,7 @@ def test_product_str(product_list):
     """Тест на строковое представление в Product"""
     assert str(product_list) == "Iphone 15, 210000.0 руб. Остаток: 8 шт."
 
+
 def test_product_add_(product_list_add1, product_list_add2):
-    """ Тест на подсчет товаров на складе"""
+    """Тест на подсчет товаров на складе"""
     assert product_list_add1 + product_list_add2 == 6000

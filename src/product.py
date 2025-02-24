@@ -36,4 +36,3 @@ class Product:
         other_total_cost_prod = other.price * other.quantity
 
         return this_total_cost_prod + other_total_cost_prod
-
