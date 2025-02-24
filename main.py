@@ -65,15 +65,5 @@ if __name__ == "__main__":
     total_cost = category1 + category2
     print(total_cost)
 
-    categories = []
-    for category_dict in prod_list:
-        products = [Product(product['name'], product['description'], product['price'], product['quantity']) for product
-                    in category_dict['products']]
-        category = Category(category_dict['name'], category_dict['description'], products)
-        categories.append(category)
-
-    print(categories)
-
-    total_cost = category1 + category2
-    print(total_cost)
-
+    total_cost_prod = product1 + product2
+    print(total_cost_prod)

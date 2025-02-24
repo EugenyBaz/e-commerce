@@ -47,3 +47,34 @@ def category_list_add2():
     Category.product_count = 0
     product2 = Product("Gnusmas", "Ухудшенная версия", 500, 11)
     return Category(name="Смартфоны", description="Не самые лучшие", product_list=[product2])
+
+
+@pytest.fixture
+def product_list_add1():
+    return Product("Gnusmas", "Ухудшенная версия", 500, 10)
+
+
+@pytest.fixture
+def product_list_add2():
+    return Product("Samsung", "Улучшенная версия", 1000, 1)
+
+
+
+@pytest.fixture
+def product_list_add1():
+    return Product("Gnusmas", "Ухудшенная версия", 500, 10)
+
+
+@pytest.fixture
+def product_list_add2():
+    return Product("Samsung", "Улучшенная версия", 1000, 1)
+
+
+@pytest.fixture
+def product_list_add1():
+    return Product("Gnusmas", "Ухудшенная версия", 500, 10)
+
+
+@pytest.fixture
+def product_list_add2():
+    return Product("Samsung", "Улучшенная версия", 1000, 1)

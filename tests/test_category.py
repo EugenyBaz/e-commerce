@@ -36,5 +36,5 @@ def test_category_str(category_list_str):
 
 
 def test_category_add_(category_list_add1, category_list_add2):
-    """ Тест на подсчет товаров по категории на складе"""
+    """Тест на подсчет товаров по категории на складе"""
     assert category_list_add1 + category_list_add2 == 6500
