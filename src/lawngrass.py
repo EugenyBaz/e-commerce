@@ -1,7 +1,8 @@
 from src.product import Product
 
+
 class LawnGrass(Product):
-    country:str
+    country: str
     germination_period: str
     color: str
 

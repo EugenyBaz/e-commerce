@@ -1,4 +1,3 @@
-
 def test_lawngrass(lawngrass_list):
     """Тестирование корректности инициализации объектов подкласса LawnGrass класса Product"""
     assert lawngrass_list.country == "Russia"

@@ -60,9 +60,11 @@ def product_list_add1():
 def product_list_add2():
     return Product("Samsung", "Улучшенная версия", 1000, 1)
 
+
 @pytest.fixture
 def lawngrass_list():
     return LawnGrass("Russia", "1 months", "green")
+
 
 @pytest.fixture
 def smartphone_list():

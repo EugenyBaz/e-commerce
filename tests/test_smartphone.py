@@ -1,4 +1,3 @@
-
 def test_smartphone(smartphone_list):
     """Тестирование корректности инициализации объектов подкласса Smartphone класса Product"""
     assert smartphone_list.efficiency == "Snapdragon 8"
