@@ -57,24 +57,3 @@ def product_list_add1():
 @pytest.fixture
 def product_list_add2():
     return Product("Samsung", "Улучшенная версия", 1000, 1)
-
-
-
-@pytest.fixture
-def product_list_add1():
-    return Product("Gnusmas", "Ухудшенная версия", 500, 10)
-
-
-@pytest.fixture
-def product_list_add2():
-    return Product("Samsung", "Улучшенная версия", 1000, 1)
-
-
-@pytest.fixture
-def product_list_add1():
-    return Product("Gnusmas", "Ухудшенная версия", 500, 10)
-
-
-@pytest.fixture
-def product_list_add2():
-    return Product("Samsung", "Улучшенная версия", 1000, 1)
