@@ -1,6 +1,8 @@
 import pytest
 
 from src.category import Category
+from src.lawngrass import LawnGrass
+from src.smartphone import Smartphone
 from src.product import Product
 
 
@@ -59,22 +61,11 @@ def product_list_add2():
     return Product("Samsung", "Улучшенная версия", 1000, 1)
 
 
-
 @pytest.fixture
-def product_list_add1():
-    return Product("Gnusmas", "Ухудшенная версия", 500, 10)
-
-
-@pytest.fixture
-def product_list_add2():
-    return Product("Samsung", "Улучшенная версия", 1000, 1)
+def lawngrass_list():
+    return LawnGrass("Russia", "1 months", "green")
 
 
 @pytest.fixture
-def product_list_add1():
-    return Product("Gnusmas", "Ухудшенная версия", 500, 10)
-
-
-@pytest.fixture
-def product_list_add2():
-    return Product("Samsung", "Улучшенная версия", 1000, 1)
+def smartphone_list():
+    return Smartphone("Snapdragon 8", "C300", "512Gb", "black")
