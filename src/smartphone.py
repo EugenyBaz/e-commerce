@@ -7,7 +7,10 @@ class Smartphone(Product):
     memory: str
     color: str
 
-    def __init__(self, efficiency, model, memory, color):
+    def __init__(self, name, description, price, quantity, efficiency, model, memory, color):
+        super().__init__(name, description, price, quantity)
+
+        # Определяем уникальные для Smartphone параметры
         self.efficiency = efficiency
         self.model = model
         self.memory = memory
