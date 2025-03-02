@@ -8,6 +8,7 @@ class Smartphone(Product):
     color: str
 
     def __init__(self, efficiency, model, memory, color):
+
         self.efficiency = efficiency
         self.model = model
         self.memory = memory
