@@ -2,6 +2,7 @@ from src.baseproduct import BaseProduct
 
 from src.printmixin import MixinInfo
 
+
 class Product(BaseProduct, MixinInfo):
     name: str
     description: str
@@ -16,7 +17,7 @@ class Product(BaseProduct, MixinInfo):
         super().__init__()
 
     def __str__(self):
-        return f'{self.name}, {self.price} руб. Остаток: {self.quantity} шт.'
+        return f"{self.name}, {self.price} руб. Остаток: {self.quantity} шт."
 
     @classmethod
     def new_product(cls, product):
@@ -41,4 +42,3 @@ class Product(BaseProduct, MixinInfo):
         other_total_cost_prod = other.price * other.quantity
 
         return this_total_cost_prod + other_total_cost_prod
-
