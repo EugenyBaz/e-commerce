@@ -2,8 +2,8 @@ import pytest
 
 from src.category import Category
 from src.lawngrass import LawnGrass
-from src.smartphone import Smartphone
 from src.product import Product
+from src.smartphone import Smartphone
 
 
 @pytest.fixture
@@ -69,3 +69,34 @@ def lawngrass_list():
 @pytest.fixture
 def smartphone_list():
     return Smartphone("Snapdragon 8", "C300", "512Gb", "black")
+
+
+@pytest.fixture
+def product_list_quant():
+    return {"name": "Iphone 15", "description": "512GB, Gray space", "price": 210000.0, "quantity": 0}
+
+
+@pytest.fixture
+def aver_price_list():
+    product1 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 10, 5)
+    product2 = Product("Iphone 15", "512GB, Gray space", 20, 8)
+    product3 = Product("Xiaomi Redmi Note 11", "1024GB, Синий", 30, 14)
+    return Category(
+        "Смартфоны",
+        "Смартфоны, "
+        "как средство не только коммуникации,"
+        " но и получения дополнительных функций для удобства жизни",
+        [product1, product2, product3],
+    )
+
+
+@pytest.fixture
+def aver_price_list_zero():
+
+    return Category(
+        "Смартфоны",
+        "Смартфоны, "
+        "как средство не только коммуникации,"
+        " но и получения дополнительных функций для удобства жизни",
+        [],
+    )

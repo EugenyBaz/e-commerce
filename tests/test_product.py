@@ -1,3 +1,8 @@
+import pytest
+
+from src.product import Product
+
+
 def test_product_init(product_list):
     assert product_list.name == "Iphone 15"
     assert product_list.description == "512GB, Gray space"
@@ -35,3 +40,9 @@ def test_product_str(product_list):
 def test_product_add_(product_list_add1, product_list_add2):
     """Тест на подсчет товаров на складе"""
     assert product_list_add1 + product_list_add2 == 6000
+
+
+def test_quantity(product_list_quant):
+    """Тест на выброс ошибки при добавлении в категорию товара с количеством = 0"""
+    with pytest.raises(ValueError):
+        Product(**product_list_quant)

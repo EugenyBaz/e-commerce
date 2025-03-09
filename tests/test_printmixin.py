@@ -1,5 +1,6 @@
 from src.product import Product
 
+
 def test_print_mixin_product(capsys):
     """Тест корректности работы миксина"""
     Product(name="Iphone 15", description="512GB, Gray space", price=-210000.0, quantity=8)

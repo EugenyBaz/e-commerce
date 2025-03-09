@@ -38,3 +38,15 @@ def test_category_str(category_list_str):
 def test_category_add_(category_list_add1, category_list_add2):
     """Тест на подсчет товаров по категории на складе"""
     assert category_list_add1 + category_list_add2 == 6500
+
+
+def test_average_price(aver_price_list):
+    """Тест на корректный подсчет средней стоимости товаров по категории"""
+    result = aver_price_list.average_price()
+    assert result == 20
+
+
+def test_average_price_zero(aver_price_list_zero):
+    """Тест на вывод значения 0 при заданном пустом списке товаров"""
+    result = aver_price_list_zero.average_price()
+    assert result == 0

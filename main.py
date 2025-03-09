@@ -68,3 +68,5 @@ if __name__ == "__main__":
 
     total_cost_prod = product1 + product2
     print(total_cost_prod)
+
+    print(category1.average_price())
