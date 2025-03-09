@@ -26,6 +26,7 @@ class Category:
         return f"{self.name}, Количество продуктов: {cat_quantity} шт."
 
     def add_product(self, product):
+        """Метод добавления товаров в категорию"""
         if isinstance(product, Product):
             self.__products.append(product)
             Category.product_count += 1
@@ -40,6 +41,8 @@ class Category:
         return prod_list
 
     def __add__(self, other):
+        """Метод суммирования стоимости товаров в категории"""
+
         if not isinstance(other, Category):
             raise TypeError("Можно складывать только категории!")
 
@@ -47,3 +50,10 @@ class Category:
         other_total_cost = sum(prod.price * prod.quantity for prod in other.__products)
 
         return this_total_cost + other_total_cost
+
+    def average_price(self):
+        """Метод подсчета средней стоимости товаров в категории"""
+        try:
+            return round(sum([product.price for product in self.__products]) / len(self.__products), 2)
+        except ZeroDivisionError:
+            return 0
